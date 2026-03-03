@@ -1793,7 +1793,7 @@
 
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Pondok Peneng · Baturiti, Bali, Indonesia</p>
+    <p>© <span id="footer-year"></span> Pondok Peneng · Baturiti, Bali, Indonesia</p>
   </div>
 </footer>
 
@@ -1814,6 +1814,10 @@
     });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
+
+  // Dynamic footer year
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
