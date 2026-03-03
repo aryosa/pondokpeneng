@@ -146,8 +146,10 @@
   gtag('config', 'G-JTSKM7XGNY');
 </script>
 
-<!-- Preload hero image for LCP -->
-<link rel="preload" as="image" href="images/pondokpeneng-hero-1920.webp" fetchpriority="high">
+<!-- Preload hero image for LCP (responsive) -->
+<link rel="preload" as="image" href="images/pondokpeneng-hero-768.webp" media="(max-width: 600px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/pondokpeneng-hero-1280.webp" media="(min-width: 601px) and (max-width: 1280px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/pondokpeneng-hero-1920.webp" media="(min-width: 1281px)" fetchpriority="high">
 <style>
   :root {
     --cream: #f2f5ee;
@@ -1170,6 +1172,15 @@
 
 
   @media (max-width: 900px) {
+    .hero-bg { animation: none; transform: none; }
+    .hero-eyebrow,
+    .hero-title,
+    .hero-sub,
+    .hero-buttons a {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
     nav { padding: 1rem 1.5rem; }
     nav.scrolled { padding: 0.8rem 1.5rem; }
     .nav-links { display: none; }
