@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Static Site Server",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/ars/Desktop/pondokpeneng-site", "-p", "8080", "-n"],
+      "port": 8080
+    }
+  ]
+}
